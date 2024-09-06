@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'Mićko';
+  src: url(Fonts/Caveat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Mićko1';
+  src: url(Fonts/Griffy-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgb(4, 222, 77), #073478);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 640px;
+  height: 540px;
+  overflow-y: scroll;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  box-shadow: -6px -1px 70px 12px rgb(25, 80, 218);
+}
+
+.todo-app h2 {
+  color: #166ae9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: 'Mićko1';
+}
+
+.todo-app h2 img {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #9db0bd;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-family: 'Mićko';
+  font-size: 20px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ee6f0d;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  font-size: 1rem;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  color: rgb(6, 10, 0);
+  /* font-family: 'Mićko1'; */
+  font-size: 20px;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: url(images/uncheck.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 15px;
+}
+
+ul li.checked {
+  color: #13020271;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #dccccc;
+}
+
+.todo-app::-webkit-scrollbar {
+  width: 5px;
+}
+
+.todo-app::-webkit-scrollbar-thumb {
+  background: #d5f104;
+  width: 4px;
+}
+
+.todo-app::-webkit-scrollbar-thumb:hover {
+  background: #eeb303;
+}
+
+.todo-app::-webkit-scrollbar-track {
+  background: #090101;
+}
